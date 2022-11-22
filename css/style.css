@@ -187,13 +187,11 @@ header .container {
 
 /* ------ HERO -------- */
 .hero {
-    /* временно */
-    background: var(--primari-black-bg-color);
+    background-image: url();
+    background: rgba(47, 48, 58, 0.4);
     padding-top: 200px;
     padding-bottom: 200px;
 }
-
-.hero .container {}
 
 .hero-title {
     font-weight: 900;
@@ -336,8 +334,6 @@ header .container {
     color: var(--primary-white-color);
 
 }
-
-.footer-list {}
 
 .footer-items {
     padding-bottom: 9px;
