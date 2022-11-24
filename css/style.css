@@ -248,6 +248,13 @@ header .container {
     margin-right: 0;
 }
 
+.property-icons {
+    background: var(--secondary-bg-color);
+    border-radius: 4px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+}
+
 .property-pre-title {
     font-size: 14px;
     line-height: 1.14;
@@ -291,7 +298,6 @@ header .container {
 .our-team .our-team-list {
     display: flex;
     gap: 30px;
-
 }
 
 .our-team-items {
@@ -372,8 +378,6 @@ header .container {
     padding: 94px 0;
 }
 
-
-
 .customer-title {
     margin-bottom: 50px;
 }
@@ -402,11 +406,6 @@ header .container {
     justify-content: center;
     align-items: center;
 }
-
-.customer-icons {
-    fill: currentColor;
-}
-
 
 /* ------ FOOTER -------- */
 .footer {
