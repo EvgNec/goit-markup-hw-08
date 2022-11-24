@@ -290,11 +290,16 @@ header .container {
 
 .our-team .our-team-list {
     display: flex;
-    justify-content: space-around;
+    gap: 30px;
+
 }
 
 .our-team-items {
     background: var(--primary-white-color);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    padding-bottom: 30px;
 }
 
 .our-team-subtitle {
@@ -324,38 +329,84 @@ header .container {
 
 .our-team-list {
     display: flex;
+}
+
+.our-team-soc-list {
+    display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .our-team-soc-items {
     width: 44px;
     height: 44px;
-    display: inline-block;
-        border-radius: 50%;
+
 }
 
 .our-team-soc-items:not(:last-child) {
     margin-right: 10px;
+
 }
 
 .our-team-soc-link {
     display: flex;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     justify-content: center;
     align-items: center;
     color: var(--primary_text-color);
+    background-color: var(--primary-white-color);
 }
 
 .our-team-soc-link:hover {
-    background: var(--acent-color);
+    background-color: var(--accent_color);
     color: var(--primary-white-color);
 }
 
 .our-team-soc-icons {
     fill: currentColor;
 }
+
+/* ------ CUSTOMER -------- */
+.customer {
+    padding: 94px 0;
+}
+
+
+
+.customer-title {
+    margin-bottom: 50px;
+}
+
+.customer-list {
+    display: flex;
+}
+
+.customer-items {
+    width: 170px;
+    height: 92px;
+    padding: 16px 32px;
+    gap: 30px;
+    border: 1px solid #AFB1B8;
+}
+
+.customer-items:not(:last-child) {
+    margin-right: 30px;
+
+}
+
+.customer-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-icons {
+    fill: currentColor;
+}
+
 
 /* ------ FOOTER -------- */
 .footer {
