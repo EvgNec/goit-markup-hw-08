@@ -242,6 +242,7 @@ header .container {
 .property-items {
     margin-right: 30px;
 
+
 }
 
 .property-items:last-child {
@@ -251,6 +252,8 @@ header .container {
 .property-icons {
     background: var(--secondary-bg-color);
     border-radius: 4px;
+    max-width: 270px;
+    max-height: 120px;
     padding: 25px 100px;
     margin-bottom: 30px;
 }
