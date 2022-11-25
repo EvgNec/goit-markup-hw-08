@@ -252,17 +252,21 @@ header .container {
     content: "";
     height: 120px;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+
     background: var(--secondary-bg-color);
+    margin-bottom: 30px;
 }
 
 .property-items.property-icons1::before {
     background-image: url("../images/antenna.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .property-items.property-icons2::before {
     background-image: url("../images/clock.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .property-items.property-icons3::before {
