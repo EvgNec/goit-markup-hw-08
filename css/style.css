@@ -241,14 +241,39 @@ header .container {
 
 .property-items {
     margin-right: 30px;
-
-
 }
 
 .property-items:last-child {
     margin-right: 0;
 }
 
+.property-items::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: var(--secondary-bg-color);
+}
+
+.property-items.property-icons1::before {
+    background-image: url("../images/antenna.svg");
+}
+
+.property-items.property-icons2::before {
+    background-image: url("../images/clock.svg");
+}
+
+.property-items.property-icons3::before {
+    background-image: url("../images/diagram.svg");
+}
+
+.property-items.property-icons4::before {
+    background-image: url("../images/astronaut.svg");
+}
+
+/* 
 .property-icons {
     background: var(--secondary-bg-color);
     border-radius: 4px;
@@ -256,7 +281,7 @@ header .container {
     max-height: 120px;
     padding: 25px 100px;
     margin-bottom: 30px;
-}
+} */
 
 .property-pre-title {
     font-size: 14px;
