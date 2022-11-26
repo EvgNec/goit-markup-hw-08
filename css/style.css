@@ -155,6 +155,20 @@ header .container {
     margin-left: auto;
 }
 
+.header-mail::before {
+    display: block;
+    content: "";
+    background-image: url("../images/delsvg/envelope.svg");
+    margin-right: 10px;
+    color: var(--title-text-color);
+}
+
+.header-tel::before {
+    background-image: url("../images/delsvg/smartphone.svg");
+    padding-right: 10px;
+    color: var(--title-text-color);
+}
+
 .header-link {
     font-weight: 500;
     font-size: 14px;
@@ -251,7 +265,7 @@ header .container {
     display: block;
     content: "";
     height: 120px;
-    background-size: contain;
+    /* background-size: contain;  */
 
     background: var(--secondary-bg-color);
     margin-bottom: 30px;
