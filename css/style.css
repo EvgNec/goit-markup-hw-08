@@ -280,7 +280,6 @@ header .container {
     background: var(--secondary-bg-color);
     margin-bottom: 30px;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .property-items.property-icons1::before {
@@ -356,8 +355,7 @@ header .container {
 .our-team-items {
     background: var(--primary-white-color);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2); */
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F;
     border-radius: 0px 0px 4px 4px;
     padding-bottom: 30px;
 }
@@ -458,23 +456,26 @@ header .container {
     height: 92px;
     gap: 30px;
     border: 1px solid #AFB1B8;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 4px;
     justify-content: center;
     align-items: center;
     color: #AFB1B8;
 }
 
-.customer-items:hover .customer-link,
-.customer-items:focus .customer-link {
+
+.customer-link:hover {
     border: 1px solid var(--accent_color);
-    color: var(--accent_color);
-    fill: var(--accent_color);      
 }
 
-.customer-items:hover .customer-icons,
-.customer-items:focus .customer-icons {
-    color: var(--accent_color);
+.customer-link:hover .customer-icons {
+    fill: var(--accent_color);
+}
+
+.customer-link:focus {
+    border: 1px solid var(--accent_color);
+}
+
+.customer-link:focus .customer-icons {
     fill: var(--accent_color);
 }
 
