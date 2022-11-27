@@ -180,7 +180,6 @@ header .container {
 .header-link:focus,
 .current {
     color: var(--accent_color);
-
 }
 
 .header-tel {
@@ -190,6 +189,14 @@ header .container {
 .header-mail,
 .header-tel {
     color: var(--primary_text-color);
+}
+
+.header-mail:hover,
+.header-mail:focus,
+.header-tel:hover,
+.header-tel:focus {
+    color: var(--accent_color);
+    fill: var(--accent_color);
 }
 
 .header-auth-items:hover svg,
@@ -458,9 +465,15 @@ header .container {
     color: #AFB1B8;
 }
 
-.customer-link:hover,
-.customer-link:focus {
+.customer-items:hover .customer-link,
+.customer-items:focus .customer-link {
     border: 1px solid var(--accent_color);
+    fill: var(--accent_color);
+}
+
+.customer-items:hover .customer-icons,
+.customer-items:focus .customer-icons {
+    fill: var(--accent_color);
 }
 
 .customer-icons.icon {
