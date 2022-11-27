@@ -468,11 +468,13 @@ header .container {
 .customer-items:hover .customer-link,
 .customer-items:focus .customer-link {
     border: 1px solid var(--accent_color);
-    fill: var(--accent_color);
+    color: var(--accent_color);
+    fill: var(--accent_color);      
 }
 
 .customer-items:hover .customer-icons,
 .customer-items:focus .customer-icons {
+    color: var(--accent_color);
     fill: var(--accent_color);
 }
 
