@@ -423,7 +423,13 @@ header .container {
 }
 
 .our-team-soc-icons {
-    fill: currentColor;
+    fill: #AFB1B8;
+}
+
+.our-team-soc-link:hover .our-team-soc-icons,
+.our-team-soc-link:focus .our-team-soc-icons {
+
+    fill: var(--primary-white-color);
 }
 
 /* ------ CUSTOMER -------- */
@@ -493,6 +499,7 @@ header .container {
 
 .footer-logo {
     display: block;
+    margin-bottom: 20px;
 }
 
 .footer-logo-white {
