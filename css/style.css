@@ -745,7 +745,8 @@ header .container {
     height: 100%;
     position: fixed;
     top: 0;
-    background: rgb(47, 48, 58, 0.5);
+    z-index: 10;
+    background: rgb(50, 50, 50, 0.5);
     transition: opacity 300ms linear, visibility 300ms linear;
 }
 
@@ -753,6 +754,7 @@ header .container {
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 20;
     transform: translate(-50%, -50%);
     transition: transform 300ms linear;
     width: 528px;
