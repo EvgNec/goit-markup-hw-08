@@ -186,6 +186,16 @@ header .container {
     color: var(--accent_color);
 }
 
+.current::after {
+    content: "";
+    margin-top: 27px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent_color);
+}
+
 .header-tel {
     margin-left: 50px;
 }
