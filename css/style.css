@@ -173,6 +173,10 @@ header .container {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 
@@ -189,6 +193,10 @@ header .container {
 .header-mail,
 .header-tel {
     color: var(--primary_text-color);
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 .header-mail:hover,
@@ -197,6 +205,14 @@ header .container {
 .header-tel:focus {
     color: var(--accent_color);
     fill: var(--accent_color);
+}
+
+.header-auth-items svg,
+.header-auth-items span {
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 .header-auth-items:hover svg,
@@ -247,6 +263,10 @@ header .container {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     margin: 0 auto;
     display: block;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 .hero-btn:hover,
@@ -337,6 +357,28 @@ header .container {
     gap: 30px;
 }
 
+.our-work-ites-wraper {
+    position: relative;
+}
+
+.our-work-items-label {
+    position: absolute;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    padding: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: rgba(47, 48, 58, 0.8);
+    top: 100%;
+    transform: translateY(-100%);
+}
+
 /* ------OUR TEAM-------- */
 .our-team {
     background: var(--secondary-bg-color);
@@ -414,6 +456,10 @@ header .container {
     align-items: center;
     color: var(--primary_text-color);
     background-color: var(--primary-white-color);
+    transition-property: fill, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 .our-team-soc-link:hover,
@@ -426,9 +472,15 @@ header .container {
     fill: #AFB1B8;
 }
 
+.our-team-soc-link .our-team-soc-icons {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
+}
+
 .our-team-soc-link:hover .our-team-soc-icons,
 .our-team-soc-link:focus .our-team-soc-icons {
-
     fill: var(--primary-white-color);
 }
 
@@ -466,21 +518,26 @@ header .container {
     justify-content: center;
     align-items: center;
     color: #AFB1B8;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 
-.customer-link:hover {
-    border: 1px solid var(--accent_color);
-}
-
-.customer-link:hover .customer-icons {
-    fill: var(--accent_color);
-}
-
+.customer-link:hover,
 .customer-link:focus {
     border: 1px solid var(--accent_color);
 }
 
+.customer-link .customer-icons {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
+}
+
+.customer-link:hover .customer-icons,
 .customer-link:focus .customer-icons {
     fill: var(--accent_color);
 }
@@ -520,6 +577,10 @@ header .container {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--primary-white-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 .footer-address-tel,
@@ -528,6 +589,10 @@ header .container {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--secondary-white-color-opacity);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 .footer-address {
@@ -591,6 +656,10 @@ header .container {
     align-items: center;
     color: var(--primary-white-color);
     background-color: rgba(255, 255, 255, 0.1);
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 .footer-soc-link:hover,
@@ -643,6 +712,11 @@ header .container {
     color: var(--title-text-color);
     background: var(--secondary-bg-color);
     padding: 6px 25px;
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
+
 }
 
 .portfolio_btn:hover,
@@ -667,6 +741,10 @@ header .container {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
 }
 
 .project-items:nth-child(3n) {
@@ -721,7 +799,10 @@ header .container {
     background: var(--accent_color);
     height: 100%;
     transform: translateY(100%);
-    transition: transform 300ms linear;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
     overflow: auto;
 }
 
@@ -745,7 +826,6 @@ header .container {
     height: 100%;
     position: fixed;
     top: 0;
-    z-index: 10;
     background: rgb(50, 50, 50, 0.5);
     transition: opacity 300ms linear, visibility 300ms linear;
 }
@@ -754,7 +834,6 @@ header .container {
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 20;
     transform: translate(-50%, -50%);
     transition: transform 300ms linear;
     width: 528px;
