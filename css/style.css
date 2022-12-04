@@ -12,6 +12,7 @@
     /* колір акценту*/
     --accent_color: #2196F3;
 
+
     /* колір фону */
     --primari-bg-color: #F5F5F5;
     /* колір фону */
@@ -59,6 +60,10 @@ img {
 
 body {
     font-family: var(--main-font);
+}
+
+textarea {
+    resize: none;
 }
 
 /* ------Utilitarian Class  -------- */
@@ -877,4 +882,55 @@ header .container {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.modal-btn {
+    width: 200px;
+    height: 50px;
+    left: 692px;
+    top: 430px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--primary-white-color);
+    background: var(--accent_color);
+    border: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    display: block;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background: #188CE8;
+}
+
+.modal-form-list {
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+}
+
+.modal-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+}
+
+.modal-form-field:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.modal-title {
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
 }

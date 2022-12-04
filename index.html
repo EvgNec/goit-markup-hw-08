@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Домашне завдання 05</title>
+    <title>Домашне завдання 06</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -333,9 +333,38 @@
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
+            <form class="modal-form js-speaker-form">
+                <h2 class="modal-title title">Залиште свої дані, ми вам передзвонимо</h2>
+                <ul class="modal-form-list list">
+                    <li class="modal-form-field">
+                        <label for="Name">Ім'я</label>
+                        <input type="text" name="name" id="name" autofocus>
+                    </li>
+                    <li class="modal-form-field">
+                        <label for="tel">Телефон</label>
+                        <input type="tel" name="tel" id="tel">
+                    </li>
+                    <li class="modal-form-field">
+                        <label for="mailto">Пошта</label>
+                        <input type="mailto" name="mailto" id="mailto">
+                    </li>
+                    <li class="modal-form-field">
+                        <label for="comment">Коментар</label>
+                        <textarea name="comment" id="comment" rows="8" placeholder="Введіть текст"></textarea>
+                    </li>
+                </ul>
+                <div class="modal-form-field">
+                    <input type="checkbox" name="policy" id="policy">
+                    <label for="policy">Погоджуюся з розсилкою та приймаю Умови договору</label>
+                </div>
+                <div class="modal-form-field">
+                    <button type="submit" class="modal-btn btn">Відправити</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/speaker.js"></script>
 </body>
 
 </html>
