@@ -333,29 +333,32 @@
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
+            <h2 class="modal-title title">Залиште свої дані, ми вам передзвонимо</h2>
             <form class="modal-form js-speaker-form">
-                <h2 class="modal-title title">Залиште свої дані, ми вам передзвонимо</h2>
+
                 <ul class="modal-form-list list">
                     <li class="modal-form-field">
                         <label for="Name">Ім'я</label>
-                        <input type="text" name="name" id="name" autofocus>
+                        <input type="text" name="name" required id="name" autofocus>
                     </li>
                     <li class="modal-form-field">
                         <label for="tel">Телефон</label>
-                        <input type="tel" name="tel" id="tel">
+                        <input type="tel" name="tel" id="tel" title="+380 (50) 999-88-77" value="+380"
+                            pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="13" maxlength="13">
                     </li>
                     <li class="modal-form-field">
-                        <label for="mailto">Пошта</label>
-                        <input type="mailto" name="mailto" id="mailto">
+                        <label for="mail">Пошта</label>
+                        <input type="mail" name="mailto" id="mailto">
                     </li>
                     <li class="modal-form-field">
                         <label for="comment">Коментар</label>
-                        <textarea name="comment" id="comment" rows="8" placeholder="Введіть текст"></textarea>
+                        <textarea name="comment" id="comment" placeholder="Введіть текст" class="textarea"></textarea>
                     </li>
                 </ul>
-                <div class="modal-form-field">
+                <div class="modal-form-checkbox">
                     <input type="checkbox" name="policy" id="policy">
-                    <label for="policy">Погоджуюся з розсилкою та приймаю Умови договору</label>
+                    <label for="policy">Погоджуюся з розсилкою та приймаю
+                        <a href="#" class="modal-form-link link">Умови договору</a></label>
                 </div>
                 <div class="modal-form-field">
                     <button type="submit" class="modal-btn btn">Відправити</button>

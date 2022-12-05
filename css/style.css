@@ -923,6 +923,29 @@ header .container {
 
 }
 
+.modal-form label {
+    color: var(--primary_text-color);
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+}
+
+.modal-form::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-field input {
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.modal-form-field input[type="checkbox"] {
+    height: 16px;
+}
+
 .modal-form-field:not(:last-child) {
     margin-bottom: 10px;
 }
@@ -933,4 +956,22 @@ header .container {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+}
+
+.textarea {
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.modal-form-checkbox {
+    display: flex;
+}
+
+#policy {
+    margin-right: 7px;
+}
+
+.modal-form-checkbox label {
+    font-size: 14px;
+    line-height: 1.71;
 }
