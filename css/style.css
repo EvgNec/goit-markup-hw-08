@@ -914,7 +914,7 @@ header .container {
     transition: transform 300ms linear;
     width: 528px;
     height: 581px;
-    background: var(--primari-bg-color);
+    background: var(--primary-white-color);
     border-radius: 4px;
     padding: 40px;
 }
@@ -937,6 +937,14 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
+}
+
+.modal-close:hover {
+    fill: var(--accent_color);
 }
 
 .is-hidden {
@@ -1033,10 +1041,10 @@ header .container {
     fill: var(--title-text-color);
 }
 
-:focus-within .modal-form-field:hover input,
-.modal-form-field:focus input,
+.modal-form-field:hover input,
+.modal-form-field:focus-within input,
 .modal-form-field:hover textarea,
-.modal-form-field:focus textarea {
+.modal-form-field:focus-within textarea {
     border: 1px solid var(--accent_color);
 }
 
@@ -1055,7 +1063,7 @@ header .container {
 }
 
 .modal-form-field:hover .modal-form-icons,
-.modal-form-field:focus .modal-form-icons {
+.modal-form-field:focus-within .modal-form-icons {
     fill: var(--accent_color);
 }
 
