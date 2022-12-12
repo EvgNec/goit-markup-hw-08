@@ -1,32 +1,20 @@
-@import './base/reset';
-@import './base/common';
-@import './base/hiden';
-@import './base/class';
+@import "./base/reset";
+@import "./base/common";
+@import "./base/hiden";
+@import "./base/class";
 
-@import './components/title';
+@import "./components/title";
 
-@import './utils/vars';
+@import "./utils/vars";
 
-@import './layouts/header';
-@import './layouts/hero';
-@import './layouts/property';
-@import './layouts/out_work';
-@import './layouts/our_team';
-@import './layouts/footer';
-@import './layouts/portfolio';
-@import './layouts/customer';
-@import './layouts/project';
-@import './layouts/modal';
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/property";
+@import "./layouts/out_work";
+@import "./layouts/our_team";
+@import "./layouts/footer";
+@import "./layouts/filters";
+@import "./layouts/portfolio";
+@import "./layouts/customer";
+@import "./layouts/project";
+@import "./layouts/modal";
