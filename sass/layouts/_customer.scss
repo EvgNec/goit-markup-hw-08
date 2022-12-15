@@ -9,9 +9,9 @@
 
 .customer-list {
   display: flex;
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+}
+.customer-items:not(:last-child) {
+  margin-right: 30px;
 }
 .customer-icons {
   fill: currentColor;

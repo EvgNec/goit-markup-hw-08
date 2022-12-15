@@ -1,235 +1,216 @@
 /* ------ MODAL WINDOWS -------- */
 .backdrop {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    background: rgb(50, 50, 50, 0.5);
-    transition: opacity 300ms linear, visibility 300ms linear;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: rgb(50, 50, 50, 0.5);
+  transition: opacity 300ms linear, visibility 300ms linear;
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform 300ms linear;
-    width: 528px;
-    height: 581px;
-    background: var(--primary-white-color);
-    border-radius: 4px;
-    padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 300ms linear;
+  width: 528px;
+  height: 581px;
+  background: var(--primary-white-color);
+  border-radius: 4px;
+  padding: 40px;
 }
 
 .backdrop.is-hidden .modal {
-    transform: translateX(-100px) rotate(90deg) translateY(-500px);
-
+  transform: translateX(-100px) rotate(90deg) translateY(-500px);
 }
 
 .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    fill: var(--secondary-black-color);
-    background: var(--primary-white-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0;
-}
-
-.modal-close:hover {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  fill: var(--secondary-black-color);
+  background: var(--primary-white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+  &:hover {
     fill: var(--accent_color);
-}
-
-.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  }
 }
 
 .modal-btn {
-    width: 200px;
-    height: 50px;
-    left: 692px;
-    top: 430px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    color: var(--primary-white-color);
-    background: var(--accent_color);
-    border: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    margin: 0 auto;
-    display: block;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0;
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-    background: #188CE8;
+  width: 200px;
+  height: 50px;
+  left: 692px;
+  top: 430px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background: var(--accent_color);
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: block;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
 }
 
 .modal-form-list {
-    margin-top: 12px;
-    margin-bottom: 20px;
-    gap: 10px;
-
+  margin-top: 12px;
+  margin-bottom: 20px;
+  gap: 10px;
 }
 
 .modal-form-field {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    padding-top: 18px;
-
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-top: 18px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &:hover input,
+  &:focus-within input,
+  &:hover textarea,
+  &:focus-within textarea {
+    border: 1px solid var(--accent_color);
+  }
 }
 
 .modal-form label {
-    color: var(--primary_text-color);
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
+  color: var(--primary_text-color);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 
 .modal-form-field input {
-
-    padding-left: 42px;
-    margin: 0;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0;
-    outline: none;
-}
-
-
-.modal-form-field:not(:last-child) {
-    margin-bottom: 10px;
+  padding-left: 42px;
+  margin: 0;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+  outline: none;
 }
 
 .modal-title {
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
 }
 
 .modal-form-label {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .modal-form-icons {
-    position: absolute;
-    top: 50%;
-    margin: 0 12px;
-    fill: var(--title-text-color);
-}
-
-.modal-form-field:hover input,
-.modal-form-field:focus-within input,
-.modal-form-field:hover textarea,
-.modal-form-field:focus-within textarea {
-    border: 1px solid var(--accent_color);
+  position: absolute;
+  top: 50%;
+  margin: 0 12px;
+  fill: var(--title-text-color);
 }
 
 .modal-form-field textarea {
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
 }
 
 .modal-form-field .modal-form-icons {
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
 }
 
 .modal-form-field:hover .modal-form-icons,
 .modal-form-field:focus-within .modal-form-icons {
-    fill: var(--accent_color);
+  fill: var(--accent_color);
 }
 
 .textarea {
-    height: 120px;
-    padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    outline: none;
-}
-
-.textarea::placeholder {
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  &::placeholder {
     color: rgba(117, 117, 117, 0.5);
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
+  }
 }
 
 .modal-form-checkbox {
-    display: flex;
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 30px;
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .modal-form-field input[type="checkbox"] {
-    height: 16px;
+  height: 16px;
 }
 
 .modal-form-checkbox label {
-    position: relative;
-    font-size: 14px;
-    line-height: 1.71;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 .modal-form-checkbox-label {
-    display: inline-block;
-    padding-left: 38px;
+  display: inline-block;
+  padding-left: 38px;
 }
 
-
-
 .checkbox-label {
-    display: inline-block;
-    position: absolute;
-    left: 10px;
-    top: 4px;
-    /* position: absolute;
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  /* position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%); */
-    width: 16px;
-    height: 15px;
-    background-image: url(../images/delsvg/chech-off.svg);
-    background-origin: border-box;
-    background-repeat: no-repeat;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/delsvg/chech-off.svg);
+  background-origin: border-box;
+  background-repeat: no-repeat;
 }
 
-.checkbox:checked+.checkbox-label {
-    background-image: url(../images/delsvg/chech-on.svg);
-    background-repeat: no-repeat;
+.checkbox:checked + .checkbox-label {
+  background-image: url(../images/delsvg/chech-on.svg);
+  background-repeat: no-repeat;
 }
-
 
 .modal-form-link {
-    color: var(--accent_color);
-    border-bottom: 1px solid var(--accent_color);
+  color: var(--accent_color);
+  border-bottom: 1px solid var(--accent_color);
 }

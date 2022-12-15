@@ -1,78 +1,76 @@
 /* ------HEADER-------- */
 .header {
-    background: var(--primary-white-color);
-    border: 1px solid #ECECEC;
+  background: var(--primary-white-color);
+  border: 1px solid #ececec;
 }
 
 header .container {
-    display: flex;
-    align-items: baseline;
-
+  display: flex;
+  align-items: baseline;
 }
 
 .header-logo {
-    margin-right: 92px;
-    padding: 24px 0;
-    display: block;
+  margin-right: 92px;
+  padding: 24px 0;
 }
 
 .header-logo-black {
-    color: var(--secondary-black-color);
+  color: var(--secondary-black-color);
 }
 
 .header-nav {
-    display: flex;
+  display: flex;
 }
 
 .header-nav li {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .header-nav li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .header-auth-nav {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    display: flex;
-    margin-left: auto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: flex;
+  margin-left: auto;
 }
 
 .header-mail-icon {
-    margin-right: 10px;
-    height: 10px;
-    width: 12px;
+  margin-right: 10px;
+  height: 10px;
+  width: 12px;
 }
 
 .header-tel-icon {
-    margin-right: 10px;
-    height: 16px;
-    width: 10px;
+  margin-right: 10px;
+  height: 16px;
+  width: 10px;
 }
 
 .header-link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--title-text-color);
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0;
-}
-
-
-.header-link:hover,
-.header-link:focus,
-.current {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+  &:hover,
+  &:focus {
     color: var(--accent_color);
+  }
 }
 
-.current::after {
+.current {
+  color: var(--accent_color);
+  fill: var(--accent_color);
+  &::after {
     content: "";
     margin-top: 27px;
     display: block;
@@ -80,42 +78,36 @@ header .container {
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent_color);
+  }
 }
 
 .header-tel {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
 .header-mail,
 .header-tel {
-    color: var(--primary_text-color);
-    transition-property: color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0;
-}
-
-.header-mail:hover,
-.header-mail:focus,
-.header-tel:hover,
-.header-tel:focus {
+  color: var(--primary_text-color);
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+  &:hover,
+  &:focus {
     color: var(--accent_color);
     fill: var(--accent_color);
+  }
 }
 
 .header-auth-items svg,
 .header-auth-items span {
-    transition-property: color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
-    transition-delay: 0;
-}
-
-.header-auth-items:hover svg,
-.header-auth-items:focus svg,
-.header-auth-items:hover span,
-.header-auth-items:focus span,
-.current {
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+  &:hover svg,
+  &:focus span {
     color: var(--accent_color);
     fill: var(--accent_color);
+  }
 }
