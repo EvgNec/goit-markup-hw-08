@@ -1,10 +1,10 @@
 /* ------ PROJECT -------- */
-.container .project-list {
+.project {
   display: flex;
   flex-wrap: wrap;
 }
 
-.project-items {
+.project__items {
   border: 1px solid #eeeeee;
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
@@ -21,37 +21,37 @@
   }
 }
 
-.project-title {
+.project__title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
 }
 
-.project-text {
+.project__text {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--primary_text-color);
 }
 
-.project-items .descr {
+.project__descr {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
   padding-left: 24px;
 }
 
-.project-items:hover .project-item-text {
+.project__items:hover .project__item-text {
   transform: translateY(0);
 }
 
-.project-img-wrap {
+.project__img-wrap {
   position: relative;
   overflow: hidden;
 }
 
-.project-item-text {
+.project__item-text {
   position: absolute;
   top: 0;
   padding: 63px 24px;

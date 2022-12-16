@@ -3,11 +3,11 @@
   padding: 94px 0;
 }
 
-.container .property-list {
+.container .property__list {
   display: flex;
 }
 
-.property-items {
+.property__items {
   margin-right: 30px;
   &:last-child {
     margin-right: 0;
@@ -41,7 +41,7 @@
   }
 }
 
-.property-pre-title {
+.property__pre-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -50,7 +50,7 @@
   margin-bottom: 10px;
 }
 
-.property-text {
+.property__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
