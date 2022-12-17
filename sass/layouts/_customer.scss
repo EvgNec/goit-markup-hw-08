@@ -22,11 +22,11 @@
   width: 170px;
   height: 92px;
   gap: 30px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--secondary-grey-bg-color);
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  color: #afb1b8;
+  color: var(--secondary-grey-bg-color);
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: linear;
