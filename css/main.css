@@ -1,4 +1,31 @@
 @charset "UTF-8";
+:root {
+  /* основний колір тексту */
+  --primary_text-color: #757575;
+  /* колір тексту заголовків */
+  --title-text-color: #212121;
+  /* основний білий колір*/
+  --primary-white-color: #ffffff;
+  /* вторичний чорний колір*/
+  --secondary-black-color: #000000;
+  /* вторичний чорний колір*/
+  --secondary-white-color-opacity: rgba(255, 255, 255, 0.6);
+  /* колір акценту*/
+  --accent_color: #2196f3;
+  /* колір фону */
+  --primari-bg-color: #f5f5f5;
+  --secondary-grey-bg-color: #afb1b8;
+  /* колір фону */
+  --primari-black-bg-color: #2f303a;
+  /* вторичний білий колір фону */
+  --secondary-bg-color: #f5f4fa;
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  --size-mobile: 480px;
+  --size-tablets: 768px;
+  --size-pc: 1200px;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -74,7 +101,7 @@ textarea {
 }
 
 .container {
-  width: 1200px;
+  width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -184,30 +211,6 @@ textarea {
   color: var(--title-text-color);
 }
 
-:root {
-  /* основний колір тексту */
-  --primary_text-color: #757575;
-  /* колір тексту заголовків */
-  --title-text-color: #212121;
-  /* основний білий колір*/
-  --primary-white-color: #ffffff;
-  /* вторичний чорний колір*/
-  --secondary-black-color: #000000;
-  /* вторичний чорний колір*/
-  --secondary-white-color-opacity: rgba(255, 255, 255, 0.6);
-  /* колір акценту*/
-  --accent_color: #2196f3;
-  /* колір фону */
-  --primari-bg-color: #f5f5f5;
-  --secondary-grey-bg-color: #afb1b8;
-  /* колір фону */
-  --primari-black-bg-color: #2f303a;
-  /* вторичний білий колір фону */
-  --secondary-bg-color: #f5f4fa;
-  --main-font: "Roboto", sans-serif;
-  --secondary-font: "Raleway", sans-serif;
-}
-
 /* ------HEADER-------- */
 .header {
   background: var(--primary-white-color);
@@ -215,9 +218,6 @@ textarea {
 }
 
 header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -229,9 +229,7 @@ header .container {
 }
 
 .header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 .header__nav li {
   margin-right: 50px;
@@ -245,9 +243,7 @@ header .container {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin-left: auto;
 }
 
@@ -326,13 +322,26 @@ header .container {
 
 /* ------ HERO -------- */
 .hero {
+  max-width: 1600px;
   background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: rgba(47, 48, 58, 0.4);
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+@media (max-width: 1200px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {

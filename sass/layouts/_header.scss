@@ -5,7 +5,8 @@
 }
 
 header .container {
-  display: flex;
+  // comp
+  // display: flex;
   align-items: baseline;
 }
 
@@ -15,7 +16,9 @@ header .container {
 }
 
 .header__nav {
-  display: flex;
+  display: none;
+  // comp
+  // display: flex;
   & li {
     margin-right: 50px;
     &:last-child {
@@ -29,7 +32,9 @@ header .container {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: flex;
+  display: none;
+  // comp
+  // display: flex;
   margin-left: auto;
 }
 
