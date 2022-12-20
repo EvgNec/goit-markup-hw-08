@@ -5,13 +5,12 @@
 
 .container .property__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .property__items {
-  margin-right: 30px;
-  &:last-child {
-    margin-right: 0;
-  }
+  width: 100%;
+  margin-bottom: 30px;
   &::before {
     display: block;
     content: "";
@@ -38,6 +37,25 @@
   &.property-icons4::before {
     background-image: url("../images/astronaut.svg");
     @extend %icons-pozition;
+  }
+  @include respond-min("phone") {
+    width: 480px;
+  }
+  @include respond-min("tablets") {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-right: 30px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @include respond-min("pc") {
+    flex-basis: calc((100% - 90px) / 4);
+    &:nth-child(n) {
+      margin-right: 30px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 

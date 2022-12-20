@@ -101,10 +101,25 @@ textarea {
 }
 
 .container {
-  width: 480px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+@media (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .current {
@@ -218,6 +233,9 @@ textarea {
 }
 
 header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -230,6 +248,9 @@ header .container {
 
 .header__nav {
   display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .header__nav li {
   margin-right: 50px;
@@ -244,6 +265,9 @@ header .container {
   line-height: 1.14;
   letter-spacing: 0.02em;
   display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-left: auto;
 }
 
@@ -393,13 +417,13 @@ header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .property__items {
-  margin-right: 30px;
-}
-.property__items:last-child {
-  margin-right: 0;
+  width: 100%;
+  margin-bottom: 30px;
 }
 .property__items::before {
   display: block;
@@ -421,6 +445,33 @@ header .container {
 .property__items.property-icons4::before {
   background-image: url("../images/astronaut.svg");
 }
+@media (min-width: 480px) {
+  .property__items {
+    width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .property__items {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+    margin-right: 30px;
+  }
+  .property__items:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .property__items {
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
+  }
+  .property__items:nth-child(n) {
+    margin-right: 30px;
+  }
+  .property__items:last-child {
+    margin-right: 0px;
+  }
+}
 
 .property__pre-title {
   font-size: 14px;
@@ -441,6 +492,12 @@ header .container {
 /* ------OUR WORK-------- */
 .our-work {
   padding-bottom: 94px;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .our-work {
+    display: block;
+  }
 }
 
 .our-work__title {

@@ -29,12 +29,19 @@
 }
 
 .container {
-  width: 480px;
-  // comp
-  // width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  @include respond-min("phone") {
+    width: 480px; //450 + 15 + 15
+  }
+  @include respond-min("tablets") {
+    width: 768px; //738 + 15 + 15
+  }
+  @include respond-min("pc") {
+    width: 1200px; //1170 + 15 + 15
+  }
 }
 
 .current {

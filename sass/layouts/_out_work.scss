@@ -1,6 +1,10 @@
 /* ------OUR WORK-------- */
 .our-work {
   padding-bottom: 94px;
+  display: none;
+  @include respond-min("pc") {
+    display: block;
+  }
 }
 
 .our-work__title {
