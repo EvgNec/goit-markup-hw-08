@@ -10,7 +10,10 @@
 
 .our-team .our-team__list {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+}
+
+img {
 }
 
 .our-team__items {
@@ -20,6 +23,27 @@
     0px 1px 3px 0px #0000001f;
   border-radius: 0px 0px 4px 4px;
   padding-bottom: 30px;
+
+  @include respond-min("phone") {
+    width: 480px;
+  }
+  @include respond-min("tablets") {
+    flex-basis: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @include respond-min("pc") {
+    flex-basis: calc((100% - 90px) / 4);
+    &:nth-child(n) {
+      margin-right: 30px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  margin-bottom: 30px;
 }
 
 .our-team__subtitle {
