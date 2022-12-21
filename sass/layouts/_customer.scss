@@ -9,10 +9,13 @@
 
 .customer__list {
   display: flex;
+  flex-wrap: wrap;
 }
-.customer__items:not(:last-child) {
-  margin-right: 30px;
+
+.customer__items {
+  margin: 0 auto;
 }
+
 .customer__icons {
   fill: currentColor;
 }
@@ -38,6 +41,30 @@
   &:hover .customer__icons,
   &:focus .customer__icons {
     fill: var(--accent_color);
+  }
+  margin: 0 auto 30px;
+
+  @include respond-min("phone") {
+    flex-basis: calc((468px - 30px) / 2);
+    &:nth-child(2n-1) {
+      margin-right: 30 px;
+    }
+  }
+  @include respond-min("tablets") {
+    flex-basis: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @include respond-min("pc") {
+    flex-basis: calc((100% - 90px) / 4);
+    &:nth-child(n) {
+      margin-right: 30px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 
