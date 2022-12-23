@@ -1,0 +1,8 @@
+@include respond-min("phone") {
+}
+@include respond-min("tablets") {
+}
+@include respond-min("pc") {
+}
+
+@include font(26, 900, 42, 0.06);

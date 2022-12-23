@@ -35,3 +35,18 @@ $breakpoints: (
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+@mixin font($fs: 14, $fw: 400, $lh: 16, $ls: 0.02) {
+  font-size: $fs + px;
+  font-weight: $fw;
+  line-height: $lh / $fs;
+  letter-spacing: $ls + em;
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}

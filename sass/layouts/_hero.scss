@@ -6,35 +6,70 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/hero_bg.jpg");
+    url("../images/hero_bg_mob.jpg");
+  @include retina {
+    background-image: linear-gradient(
+        45deg,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero_bg_mob-2x.jpg");
+  }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: rgba(47, 48, 58, 0.4);
   padding-top: 118px;
   padding-bottom: 118px;
-  // comp
-  // padding-top: 200px;
-  // padding-bottom: 200px;
-  @include respond-max("pc") {
-    padding-top: 100px;
-    padding-bottom: 200px;
+
+  @include respond-min("tablets") {
+    background-image: linear-gradient(
+        45deg,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero_bg_tab.jpg");
+    @include retina {
+      background-image: linear-gradient(
+          45deg,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero_bg_tab-2x.jpg");
+    }
   }
+
   @include respond-min("pc") {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(
+        45deg,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero_bg.jpg");
+    @include retina {
+      background-image: linear-gradient(
+          45deg,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero_bg-2x.jpg");
+    }
   }
 }
 
 .hero__title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  @include font(26, 900, 42, 0.06);
   text-align: center;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
   margin-bottom: 30px;
+  @include respond-min("tablets") {
+  }
+  @include respond-min("pc") {
+    @include font(44, 900, 60, 0.06);
+  }
 }
 
 .hero__btn {
