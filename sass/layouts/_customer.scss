@@ -1,6 +1,10 @@
 /* ------ CUSTOMER -------- */
 .customer {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @include respond-min("pc") {
+    padding: 94px 0;
+  }
 }
 
 .customer__title {

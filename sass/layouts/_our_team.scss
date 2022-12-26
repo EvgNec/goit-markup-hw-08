@@ -1,7 +1,11 @@
 /* ------OUR TEAM-------- */
 .our-team {
   background: var(--secondary-bg-color);
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @include respond-min("pc") {
+    padding: 94px 0;
+  }
 }
 
 .our-team__title {

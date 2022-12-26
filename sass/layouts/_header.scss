@@ -1,11 +1,14 @@
 /* ------HEADER-------- */
 .header {
+ 
   background: var(--primary-white-color);
   border: 1px solid #ececec;
 }
 
 header .container {
+
   display: flex;
+   position: relative;
   align-items: baseline;
   justify-content: space-between;
 }
@@ -109,7 +112,13 @@ header .container {
   }
 }
 .menu-open {
-  margin-left: auto;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
   @include respond-min("tablets") {
     display: none;
   }
@@ -151,6 +160,8 @@ header .container {
   display: block;
   margin-left: auto;
   margin-right: 0;
+  border: none;
+  background: #ff111100;
 }
 
 .mobile-menu__nav {

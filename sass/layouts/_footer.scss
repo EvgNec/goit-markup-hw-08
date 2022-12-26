@@ -4,16 +4,19 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
-// mob
-// .footer .container {
-//   flex-direction: column;
-// }
-// mob
-// .item1,
-// .item2,
-// .item3 {
-//   margin: auto;
-// }
+
+.footer .container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // gap: 60px;
+}
+
+//  mob
+.item1,
+.item2,
+.item3 {
+  margin: 0 auto;
+}
 .footer__logo {
   display: block;
   margin-bottom: 20px;
@@ -59,10 +62,43 @@
   justify-content: left;
 }
 
-.footer__list-items.item1 {
-  display: inline-block;
-  height: 132px;
-  width: 231px;
+.footer__list-items {
+  @include respond-min("phone") {
+  }
+  @include respond-min("tablets") {
+  }
+  @include respond-min("pc") {
+  }
+  &.item1 {
+    display: inline-block;
+    width: 480px;
+    text-align: center;
+    @include respond-min("phone") {
+    }
+    @include respond-min("tablets") {
+      height: 132px;
+      width: 231px;
+    }
+    @include respond-min("pc") {
+      text-align: start;
+    }
+    padding-bottom: 60px;
+  }
+  &.item2 {
+    display: inline-block;
+    text-align: center;
+    @include respond-min("pc") {
+      text-align: start;
+    }
+  }
+  &.item3 {
+    padding-top: 60px;
+    display: inline-block;
+    text-align: center;
+    @include respond-min("pc") {
+      text-align: start;
+    }
+  }
 }
 
 .footer .container {
@@ -119,4 +155,7 @@
 
 .footer-mail-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
