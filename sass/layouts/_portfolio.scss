@@ -1,12 +1,29 @@
 /* ------PORTFOLIO  -------- */
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+
+  @include respond-min("pc") {
+    padding: 94px 0;
+  }
 }
 
 .container .portfolio__nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: start;
+  width: 406px;
+  margin-bottom: 40px;
+  @include respond-min("phone") {
+    width: 480px;
+  }
+  @include respond-min("tablets") {
+    margin-bottom: 14px;
+    width: 768px;
+    justify-content: center;
+  }
+  @include respond-min("pc") {
+    margin-bottom: 34px;
+  }
 }

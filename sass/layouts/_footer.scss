@@ -30,9 +30,7 @@
 }
 
 .address__method {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(14, 400, 24, 0.03);
   color: var(--secondary-white-color-opacity);
   transition-property: color;
   transition-duration: 250ms;
@@ -53,9 +51,7 @@
 
 .footer__title {
   display: inline-block;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
+    @include font(14, 400, 16, 0.03);
   text-transform: uppercase;
   color: var(--primary-white-color);
   margin-bottom: 20px;
