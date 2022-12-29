@@ -92,6 +92,7 @@
     display: inline-block;
     text-align: center;
     @include respond-min("pc") {
+       padding-top: 0px;
       text-align: start;
     }
   }

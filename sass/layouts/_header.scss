@@ -93,8 +93,9 @@ header .container {
     color: var(--accent_color);
   }
 }
-.auth-nav__items {
-  // display: block;
+.auth-nav__items:nth-child(1) {
+  margin-bottom: 10px;
+ 
 }
 
 .auth-nav__link {
