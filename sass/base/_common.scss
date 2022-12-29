@@ -59,6 +59,8 @@ img {
   fill: var(--accent_color);
   &::after {
     content: "";
+    position: absolute;
+    bottom: 0;
     margin-top: 27px;
     display: block;
     width: 100%;
@@ -207,6 +209,9 @@ img {
     color: var(--accent_color);
     fill: var(--accent_color);
   }
+}
+.mob-auth-nav__tel {
+  color: var(--accent_color);
 }
 .mob-auth-nav__mail {
   @include font(24, 500, 28, 0.02);
