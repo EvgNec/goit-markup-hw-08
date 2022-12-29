@@ -115,6 +115,26 @@ img {
   fill: currentColor;
 }
 
+
+.menu-button{
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  @include respond-min("tablets") {
+    display: none;
+  }
+  @include respond-min("pc") {
+  }
+}
+
+
+
+
+
 .menu-open {
   position: absolute;
   right: 15px;
@@ -141,7 +161,7 @@ img {
   right: 0px;
 
   transition: left 300ms, visibility 300ms;
-  & .mobile-container {
+  & .mobile-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -153,6 +173,7 @@ img {
     right: auto;
   }
   @include respond-min("phone") {
+    width: 480px;
   }
   @include respond-min("tablets") {
     display: none;
