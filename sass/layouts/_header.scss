@@ -8,12 +8,15 @@ header .container {
   display: flex;
   position: relative;
   align-items: center;
-  // justify-content: start;
+padding: 15px;
+  @include respond-min("phone") {
+    width: 480px;
+  }
   @include respond-min("tablets") {
-    // align-items: baseline;
+width: 768px;
   }
   @include respond-min("pc") {
-    // align-items: baseline;
+width: 1200px;
   }
 }
 

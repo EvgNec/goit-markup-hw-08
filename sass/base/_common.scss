@@ -115,27 +115,7 @@ img {
   fill: currentColor;
 }
 
-
-.menu-button{
-  position: absolute;
-  right: 15px;
-  top: 20px;
-  display: block;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  @include respond-min("tablets") {
-    display: none;
-  }
-  @include respond-min("pc") {
-  }
-}
-
-
-
-
-
-.menu-open {
+.menu-button {
   position: absolute;
   right: 15px;
   top: 20px;
@@ -152,25 +132,33 @@ img {
 
 .mobile-menu {
   position: fixed;
-  z-index: 1;
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
   top: 0px;
   left: 0px;
   right: 0px;
-
   transition: left 300ms, visibility 300ms;
-  & .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 48px 0px 48px 40px;
+  & .container {
+    display: block;
     height: 100%;
+    padding: 48px 0px 48px 40px;
   }
   .is-hidden {
     left: -100px;
     right: auto;
+  }
+& .container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+  & .mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
   @include respond-min("phone") {
     width: 480px;
@@ -179,15 +167,33 @@ img {
     display: none;
   }
 }
-.menu-close {
+
+.menu-open {
   position: absolute;
   right: 15px;
+  top: 10px;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  @include respond-min("tablets") {
+    display: none;
+  }
+  @include respond-min("pc") {
+  }
+}
+.menu-close {
+  position: absolute;
+  right: 0px;
   top: 10px;
   display: block;
   margin-left: auto;
   margin-right: 0;
   border: none;
   background: #ff111100;
+  @include respond-min("tablets") {
+    display: none;
+  }
 }
 
 .mobile-menu__nav {
@@ -212,6 +218,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-top: 200px;
 }
 
 .mob-auth-nav__items {
@@ -240,6 +247,7 @@ img {
 .mob-soc-list {
   display: flex;
   justify-content: left;
+  flex-wrap: wrap;
 }
 .mob-soc-list__items {
   padding: 0px 10px 0px 10px;

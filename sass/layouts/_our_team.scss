@@ -9,7 +9,18 @@
 }
 
 .our-team__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  
+@include font(28, 700, 33, 0.03);
+  @include respond-min("phone") {
+}
+@include respond-min("tablets") {
+}
+
+  @include respond-min("pc") {
+    @include font(36, 700, 42, 0.03);
+    margin-bottom: 50px;
+  }
 }
 
 .our-team .our-team__list {
