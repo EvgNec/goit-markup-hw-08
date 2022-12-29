@@ -32,6 +32,7 @@ header .container {
 }
 
 .header__nav {
+ 
   & li {
     margin-right: 50px;
     &:last-child {
@@ -95,7 +96,6 @@ header .container {
 }
 .auth-nav__items:nth-child(1) {
   margin-bottom: 10px;
- 
 }
 
 .auth-nav__link {

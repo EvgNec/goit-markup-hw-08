@@ -51,7 +51,7 @@
 
 .footer__title {
   display: inline-block;
-    @include font(14, 400, 16, 0.03);
+  @include font(14, 400, 16, 0.03);
   text-transform: uppercase;
   color: var(--primary-white-color);
   margin-bottom: 20px;
@@ -90,9 +90,11 @@
   &.item3 {
     padding-top: 60px;
     display: inline-block;
+    width: 450px;
     text-align: center;
     @include respond-min("pc") {
-       padding-top: 0px;
+      width: 600px;
+      padding-top: 0px;
       text-align: start;
     }
   }
