@@ -7,13 +7,28 @@
 header .container {
   display: flex;
   position: relative;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: start;
+  @include respond-min("tablets") {
+    align-items: baseline;
+  }
+  @include respond-min("pc") {
+    align-items: baseline;
+  }
 }
 
 .header__logo {
-  margin-right: 92px;
-  padding: 24px 0;
+  padding: 16px 0;
+  @include respond-min("phone") {
+  }
+  @include respond-min("tablets") {
+    padding: 26px 0;
+    margin-right: 87px;
+  }
+  @include respond-min("pc") {
+    padding: 24px 0;
+    margin-right: 92px;
+  }
 }
 
 .header__nav {
@@ -30,6 +45,7 @@ header .container {
     display: flex;
   }
   @include respond-min("pc") {
+    margin-right: 225px;
   }
 }
 
@@ -43,11 +59,11 @@ header .container {
   }
   @include respond-min("tablets") {
     display: flex;
-    flex-wrap: wrap;
-    justify-content:flex-start;
+    flex-direction: column;
     margin-left: 60px;
   }
   @include respond-min("pc") {
+    flex-direction: row;
     gap: 30px;
   }
 }
@@ -78,9 +94,7 @@ header .container {
   }
 }
 .auth-nav__items {
-  // &:not(:last-child) {
-  //   margin-right: 30px;
-  // }
+  // display: block;
 }
 
 .auth-nav__link {

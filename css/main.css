@@ -422,17 +422,42 @@ header .container {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+@media (min-width: 768px) {
+  header .container {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+@media (min-width: 1200px) {
+  header .container {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .header__logo {
-  margin-right: 92px;
-  padding: 24px 0;
+  padding: 16px 0;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    padding: 26px 0;
+    margin-right: 87px;
+  }
+}
+@media (min-width: 1200px) {
+  .header__logo {
+    padding: 24px 0;
+    margin-right: 92px;
+  }
 }
 
 .header__nav {
@@ -451,6 +476,12 @@ header .container {
     display: flex;
   }
 }
+@media (min-width: 1200px) {
+  .header__nav {
+    margin-right: 225px;
+  }
+}
+
 .header__auth-nav {
   font-weight: 500;
   font-size: 14px;
@@ -463,16 +494,19 @@ header .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: 60px;
   }
 }
 @media (min-width: 1200px) {
   .header__auth-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 30px;
   }
 }
@@ -1253,6 +1287,7 @@ header .container {
   .customer__link {
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
         flex-basis: calc((100% - 90px) / 4);
+    margin-bottom: 0px;
   }
   .customer__link:nth-child(n) {
     margin-right: 30px;

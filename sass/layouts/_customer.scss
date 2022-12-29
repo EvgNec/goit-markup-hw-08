@@ -63,8 +63,10 @@
   }
   @include respond-min("pc") {
     flex-basis: calc((100% - 90px) / 4);
+    margin-bottom: 0px;
     &:nth-child(n) {
       margin-right: 30px;
+
     }
     &:last-child {
       margin-right: 0px;
