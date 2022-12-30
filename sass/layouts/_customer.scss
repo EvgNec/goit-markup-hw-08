@@ -1,6 +1,6 @@
 /* ------ CUSTOMER -------- */
 .customer {
-  padding: 60px 0 30px 0;
+  padding: 60px 0 60px 0;
 
   @include respond-min("pc") {
     padding: 94px 0;
@@ -9,16 +9,21 @@
 
 .customer__title {
   margin-bottom: 50px;
+  @include font(28, 700, 33, 0.03);
+  @include respond-min("pc") {
+    @include font(36, 700, 42, 0.03);
+  }
 }
 
 .customer__list {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
+  flex-direction: column;
   margin-bottom: -30px;
-}
-
-.customer__items {
-  margin: 0 auto;
+  @include respond-min("phone") {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 
 .customer__icons {
@@ -29,7 +34,6 @@
   display: flex;
   width: 210px;
   height: 92px;
-  gap: 30px;
   border: 1px solid var(--secondary-grey-bg-color);
   border-radius: 4px;
   justify-content: center;
@@ -39,6 +43,12 @@
   transition-duration: 250ms;
   transition-timing-function: linear;
   transition-delay: 0;
+  @include respond-min("tablets") {
+    width: 226px;
+  }
+  @include respond-min("pc") {
+    width: 170px;
+  }
   &:hover,
   &:focus {
     border: 1px solid var(--accent_color);
@@ -47,24 +57,58 @@
   &:focus .customer__icons {
     fill: var(--accent_color);
   }
-  margin: 0 auto 30px;
+  //   margin: 0 auto;
+  // margin-bottom: 30px;
+  //    width: 210px;
+  //   @include respond-min("phone") {
+  //     flex-basis: calc((468px - 60px) / 2);
+  //     width: 210px;
 
+  //     &:nth-child(2n-1) {
+  //       margin-right: 30px;
+  //     }
+  //   }
+  //   @include respond-min("tablets") {
+  //     flex-basis: calc((100% - 60px) / 3);
+  //     width: 226px;
+  //     margin-right: 30px;
+  //     &::not(:nth-child(3n)) {
+  //       margin-right: 30px;
+  //     }
+  //   }
+  //   @include respond-min("pc") {
+  //     flex-basis: calc((100% - 90px) / 4);
+  //     width: 170px;
+  //     &:last-child {
+  //       margin-right: 0px;
+  //     }
+  //   }
+}
+.customer__items {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 210px;
   @include respond-min("phone") {
-    flex-basis: calc((468px - 30px) / 2);
-    &:nth-child(2n-1) {
-      margin-right: 30 px;
+    flex-basis: calc((468px - 60px) / 2);
+    width: 210px;
+    margin-right: 30px;
+    &:nth-child(2n) {
+      margin-right: 0px;
     }
   }
   @include respond-min("tablets") {
-    flex-basis: calc((100% - 60px) / 3);
+    flex-basis: calc((100% - 90px) / 3);
     width: 226px;
+    &:nth-child(2n) {
+      margin-right: 30px;
+    }
     margin-right: 30px;
     &:nth-child(3n) {
-      margin-right: 0;
+      margin-right: 0px;
     }
   }
   @include respond-min("pc") {
-    flex-basis: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 150px) / 6);
     width: 170px;
     &:nth-child(n) {
       margin-right: 30px;
@@ -74,7 +118,6 @@
     }
   }
 }
-
 .customer__link .customer__icons {
   transition-property: fill;
   transition-duration: 250ms;

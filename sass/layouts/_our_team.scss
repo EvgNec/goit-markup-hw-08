@@ -26,9 +26,9 @@
 .our-team .our-team__list {
   display: flex;
   flex-wrap: wrap;
-}
-
-img {
+    @include respond-min("pc") {
+    margin-bottom: -30px;
+  }
 }
 
 .our-team__items {

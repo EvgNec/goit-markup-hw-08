@@ -142,8 +142,7 @@ img {
 .current::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  margin-top: 27px;
+  bottom: 4px;
   display: block;
   width: 100%;
   height: 4px;
@@ -286,7 +285,7 @@ img {
 .menu-open {
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: -5px;
   display: block;
   padding: 0;
   border: 0;
@@ -476,7 +475,6 @@ header .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px;
 }
 @media (min-width: 480px) {
   header .container {
@@ -528,15 +526,15 @@ header .container {
 }
 
 .header__auth-nav {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   display: none;
   margin: 21px 0;
 }
 @media (min-width: 768px) {
   .header__auth-nav {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1666666667;
+    letter-spacing: 0.02em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -549,6 +547,10 @@ header .container {
 }
 @media (min-width: 1200px) {
   .header__auth-nav {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1428571429;
+    letter-spacing: 0.02em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -633,15 +635,18 @@ header .container {
 }
 
 /* ------ HERO -------- */
-.hero {
+body {
   max-width: 1600px;
+}
+
+.hero {
   background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero_bg_mob.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: rgba(47, 48, 58, 0.4);
-  padding-top: 118px;
-  padding-bottom: 118px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
@@ -735,6 +740,12 @@ header .container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+  .property__list {
+    margin-bottom: -30px;
+  }
 }
 
 .property__items {
@@ -896,6 +907,11 @@ header .container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .our-team .our-team__list {
+    margin-bottom: -30px;
+  }
 }
 
 .our-team__items {
@@ -1283,7 +1299,7 @@ header .container {
 
 /* ------ CUSTOMER -------- */
 .customer {
-  padding: 60px 0 30px 0;
+  padding: 60px 0 60px 0;
 }
 @media (min-width: 1200px) {
   .customer {
@@ -1293,19 +1309,39 @@ header .container {
 
 .customer__title {
   margin-bottom: 50px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1785714286;
+  letter-spacing: 0.03em;
+}
+@media (min-width: 1200px) {
+  .customer__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1666666667;
+    letter-spacing: 0.03em;
+  }
 }
 
 .customer__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: -30px;
 }
-
-.customer__items {
-  margin: 0 auto;
+@media (min-width: 480px) {
+  .customer__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .customer__icons {
@@ -1318,7 +1354,6 @@ header .container {
   display: flex;
   width: 210px;
   height: 92px;
-  gap: 30px;
   border: 1px solid var(--secondary-grey-bg-color);
   border-radius: 4px;
   -webkit-box-pack: center;
@@ -1336,7 +1371,16 @@ header .container {
           transition-timing-function: linear;
   -webkit-transition-delay: 0;
           transition-delay: 0;
-  margin: 0 auto 30px;
+}
+@media (min-width: 768px) {
+  .customer__link {
+    width: 226px;
+  }
+}
+@media (min-width: 1200px) {
+  .customer__link {
+    width: 170px;
+  }
 }
 .customer__link:hover, .customer__link:focus {
   border: 1px solid var(--accent_color);
@@ -1344,36 +1388,47 @@ header .container {
 .customer__link:hover .customer__icons, .customer__link:focus .customer__icons {
   fill: var(--accent_color);
 }
+
+.customer__items {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 210px;
+}
 @media (min-width: 480px) {
-  .customer__link {
-    -ms-flex-preferred-size: 219px;
-        flex-basis: 219px;
+  .customer__items {
+    -ms-flex-preferred-size: 204px;
+        flex-basis: 204px;
+    width: 210px;
+    margin-right: 30px;
   }
-  .customer__link:nth-child(2n-1) {
-    margin-right: 30 px;
+  .customer__items:nth-child(2n) {
+    margin-right: 0px;
   }
 }
 @media (min-width: 768px) {
-  .customer__link {
-    -ms-flex-preferred-size: calc((100% - 60px) / 3);
-        flex-basis: calc((100% - 60px) / 3);
+  .customer__items {
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
     width: 226px;
     margin-right: 30px;
   }
-  .customer__link:nth-child(3n) {
-    margin-right: 0;
+  .customer__items:nth-child(2n) {
+    margin-right: 30px;
+  }
+  .customer__items:nth-child(3n) {
+    margin-right: 0px;
   }
 }
 @media (min-width: 1200px) {
-  .customer__link {
-    -ms-flex-preferred-size: calc((100% - 90px) / 4);
-        flex-basis: calc((100% - 90px) / 4);
+  .customer__items {
+    -ms-flex-preferred-size: calc((100% - 150px) / 6);
+        flex-basis: calc((100% - 150px) / 6);
     width: 170px;
   }
-  .customer__link:nth-child(n) {
+  .customer__items:nth-child(n) {
     margin-right: 30px;
   }
-  .customer__link:last-child {
+  .customer__items:last-child {
     margin-right: 0px;
   }
 }
@@ -1759,8 +1814,18 @@ header .container {
 }
 .form-checkbox label {
   position: relative;
-  font-size: 14px;
-  line-height: 1.71;
+}
+@media (min-width: 768px) {
+  .form-checkbox label {
+    font-size: 12px;
+    line-height: 1.14;
+  }
+}
+@media (min-width: 1200px) {
+  .form-checkbox label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form-checkbox__label {
@@ -1772,12 +1837,17 @@ header .container {
   display: inline-block;
   position: absolute;
   left: 10px;
-  top: 4px;
+  top: -2px;
   width: 16px;
   height: 15px;
   background-image: url(../images/delsvg/chech-off.svg);
   background-origin: border-box;
   background-repeat: no-repeat;
+}
+@media (min-width: 1200px) {
+  .form-checkbox__square {
+    top: 4px;
+  }
 }
 
 .checkbox:checked + .form-checkbox__square {

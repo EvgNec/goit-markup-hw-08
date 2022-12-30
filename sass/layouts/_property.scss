@@ -11,7 +11,11 @@
   display: flex;
   flex-wrap: wrap;
 }
-
+.property__list {
+  @include respond-min("pc") {
+    margin-bottom: -30px;
+  }
+}
 .property__items {
   width: 100%;
   margin-bottom: 30px;

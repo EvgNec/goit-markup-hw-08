@@ -179,8 +179,15 @@
   margin-bottom: 30px;
   & label {
     position: relative;
-    font-size: 14px;
+    @include respond-min("tablets") {
+          font-size: 12px;
+    line-height: 1.14;
+}
+@include respond-min("pc") {
+      font-size: 14px;
     line-height: 1.71;
+}
+
   }
 }
 
@@ -193,12 +200,15 @@
   display: inline-block;
   position: absolute;
   left: 10px;
-  top: 4px;
+  top: -2px;
   width: 16px;
   height: 15px;
   background-image: url(../images/delsvg/chech-off.svg);
   background-origin: border-box;
   background-repeat: no-repeat;
+@include respond-min("pc") {
+  top: 4px;
+}
 }
 
 .checkbox:checked + .form-checkbox__square {
